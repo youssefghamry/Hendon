@@ -1,0 +1,83 @@
+/* ==========================================================================
+   Single Post Navigation styles
+   ========================================================================== */
+
+#qodef-single-post-navigation {
+	@include qodefRelativeLayout();
+	margin: 18px 0 0;
+	
+	.qodef-m-inner {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 15px;
+		background-image: url('/wp-content/themes/hendon/assets/img/pattern.png');
+	}
+	
+	.qodef-m-nav {
+		position: relative;
+		display: flex;
+		align-items: center;
+		
+		> * {
+			display: block;
+			line-height: inherit;
+		}
+		
+		&.qodef--prev {
+			
+			.qodef-m-nav-label {
+				margin-left: 30px;
+			}
+
+		}
+		
+		&.qodef--next {
+			flex-direction: row-reverse;
+			margin-left: auto;
+			text-align: right;
+			
+			.qodef-m-nav-label {
+				margin-right: 30px;
+			}
+		}
+		
+		img {
+			width: 104px;
+		}
+	}
+	
+	.qodef-icon-elegant-icons {
+		font-size: 30px;
+	}
+	
+	.qodef-m-nav-label {
+		position: relative;
+		font-size: 10.71px;
+		line-height: 22px;
+		font-weight: 500;
+		letter-spacing: 0.3em;
+		text-transform: uppercase;
+		font-family: $alternate-heading-font;
+		color: $main-color;
+		
+		&:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 1px;
+			background-color: currentColor;
+			opacity: 0.4;
+		}
+
+		&:hover {
+
+			&:after {
+				animation: qode-line-visible cubic-bezier(0.68, 0.17, 0.25, 1) 1s forwards;
+			}
+		}
+	}
+}

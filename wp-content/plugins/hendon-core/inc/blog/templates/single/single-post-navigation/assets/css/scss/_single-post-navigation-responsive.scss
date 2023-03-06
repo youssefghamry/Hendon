@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Single Post Navigation responsive styles
+   ========================================================================== */
+
+#qodef-single-post-navigation {
+
+	@include qodefScreenSize480 {
+
+		.qodef-m-nav {
+
+			&.qodef--prev {
+				.qodef-m-nav-label {
+					margin-left: 0;
+				}
+			}
+
+			&.qodef--next {
+				.qodef-m-nav-label {
+					margin-right: 0;
+				}
+			}
+
+			img {
+				display: none;
+			}
+		}
+	}
+}

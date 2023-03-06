@@ -1,0 +1,109 @@
+/* ==========================================================================
+   Social Share shortcode styles
+   ========================================================================== */
+
+.qodef-social-share {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	
+	.qodef-social-title {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 5px 0 0;
+		@include qodefHeadingStyle(h5);
+	}
+	
+	ul {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	
+	li {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		line-height: 1;
+		padding: 0;
+		margin: 0;
+		
+		a {
+			font-size: 20px;
+
+			.qodef-svg-circle {
+				position: absolute;
+				display: block;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				z-index: 1;
+				fill: none;
+				color: currentColor;
+				stroke: rgba($main-color, 1);
+				transition: all .8s cubic-bezier(0.14, 0.57, 0.14, 1.03);
+				overflow: visible;
+	
+				circle {
+					stroke-dasharray: 160;
+					stroke-dashoffset: 160;
+					stroke-width: 1;
+					transition: all .8s cubic-bezier(.45,0,.14,1.03);
+					transform: rotate(-200deg);
+					transform-origin: center;
+	
+					.qodef-browser--ms-explorer & {
+						opacity: 0;
+					}
+				}
+			}
+	
+			&:hover {
+	
+				.qodef-svg-circle circle {
+					stroke-dashoffset: 0;
+					transform: rotate(55deg);
+					transition: 1s cubic-bezier(0.38, 0.67, 0.76, 0.66);
+					
+					.qodef-browser--ms-explorer & {
+						opacity: 1;
+					}
+				}
+			}
+		}
+		
+		
+		&.qodef-facebook-share a:hover {
+			color: #3b5998;
+		}
+		
+		&.qodef-twitter-share a:hover {
+			color: #00aced;
+		}
+		
+		&.qodef-linkedin-share a:hover {
+			color: #007bb5;
+		}
+		
+		&.qodef-tumblr-share a:hover {
+			color: #32506d;
+		}
+		
+		&.qodef-pinterest-share a:hover {
+			color: #cb2027;
+		}
+		
+		&.qodef-vk-share a:hover {
+			color: #45668e;
+		}
+	}
+}
+
+/* ==========================================================================
+   Social Share shortcode styles
+   ========================================================================== */

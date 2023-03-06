@@ -1,0 +1,163 @@
+/* ==========================================================================
+   Instagram List shortcode styles
+   ========================================================================== */
+
+.qodef-instagram-list {
+	
+	#sb_instagram #sbi_images {
+		
+		.sbi_photo_wrap {
+			
+			a {
+				opacity: 1 !important;
+				position: relative;
+				background-image: none !important;
+				height: auto !important;
+				padding-bottom: 0 !important;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			
+				.qodef-svg-circle {
+					position: absolute;
+					display: block;
+					width: 30px;
+					height: 30px;
+					z-index: 1;
+					fill: none;
+					color: currentColor;
+					stroke: rgba($main-color, 1);
+					transition: all .8s cubic-bezier(0.14, 0.57, 0.14, 1.03);
+					overflow: visible;
+		
+					circle {
+						stroke-dasharray: 160;
+						stroke-dashoffset: 160;
+						stroke-width: 1;
+						transition: all .8s cubic-bezier(.45,0,.14,1.03);
+						transform: rotate(-200deg);
+						transform-origin: center;
+		
+						.qodef-browser--ms-explorer & {
+							opacity: 0;
+						}
+					}
+				}
+		
+				&:before {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					background-color: rgba(0,0,0,0.6);
+					opacity: 0;
+					transition: opacity 0.3s ease-in-out;
+				}
+				
+				&:after {
+					content: "\f955";
+					font-family: "Font Awesome 5 Brands";
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
+					width: 2em;
+					height: 2em;
+					font-size: 15px;
+					line-height: 2em;
+					text-align: center;
+					color: $main-color;
+					opacity: 0;
+					transition: all .3s ease-in-out;
+				}
+				
+				&:hover {
+					&:after,
+					&:before {
+						opacity: 1;
+					}
+
+					.qodef-svg-circle circle {
+						stroke-dashoffset: 10;
+						transform: rotate(55deg);
+						transition: 1s cubic-bezier(0.38, 0.67, 0.76, 0.66);
+						
+						.qodef-browser--ms-explorer & {
+							opacity: 1;
+						}
+					}
+				}
+				
+				img {
+					display: inline-block !important;
+				}
+			}
+		}
+	}
+	
+	@for $i from 0 to length($grid-columns-gutter-label) {
+		&.qodef-gutter--#{nth($grid-columns-gutter-label,$i+1)} {
+			$gutter-size: nth($grid-columns-gutter-size, $i+1);
+			$gutter-double-size: $gutter-size * 2;
+			
+			&.qodef--no-bottom-space {
+				
+				@if ($gutter-size == 0) {
+					margin-bottom: 0;
+				} @else {
+					margin-bottom: -#{$gutter-double-size}px;
+				}
+			}
+			
+			#sb_instagram #sbi_images {
+				float: none;
+				padding: 0 !important;
+				width: auto;
+				@if ($gutter-size == 0) {
+					margin: 0;
+				} @else {
+					margin: 0 -#{$gutter-size}px;
+				}
+				
+				> .sbi_item {
+					
+					@if ($gutter-size == 0) {
+						padding: 0 !important;
+						margin: 0 !important;
+					} @else {
+						padding: 0 #{$gutter-size}px !important;
+						margin: 0 0 #{$gutter-double-size}px !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+// slider styles
+.qodef-instagram-swiper-container {
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	z-index: 1;
+	visibility: hidden;
+	overflow: hidden;
+	
+	.swiper-slide {
+		
+		a, img {
+			width: 100%;
+		}
+	}
+	
+	&.qodef-swiper--initialized {
+		visibility: visible;
+	}
+}
+
+/* ==========================================================================
+   Instagram List shortcode styles
+   ========================================================================== */

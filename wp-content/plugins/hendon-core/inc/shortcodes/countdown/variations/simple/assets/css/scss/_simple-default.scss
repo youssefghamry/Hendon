@@ -1,0 +1,27 @@
+.qodef-countdown.qodef-layout--simple {
+
+	.qodef-digit-wrapper {
+		display: inline-block;
+		position: relative;
+		vertical-align: top;
+		padding: 0 20px;
+	}
+
+	.qodef-digit {
+		font-family: inherit;
+		font-size: 150px;
+		line-height: 1em;
+		font-weight: 400;
+		color: rgba($main-color, 0.8);
+	}
+	
+	.qodef-label {
+		@include qodefH6Style();
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%);
+		font-weight: 500;
+		text-transform: uppercase;
+	}
+}

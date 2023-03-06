@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Icon With Text shortcode styles
+   ========================================================================== */
+
+.qodef-icon-with-text {
+	
+	.qodef-m-title {
+		margin: 0;
+		
+		a {
+			display: block;
+		}
+	}
+	
+	.qodef-m-text {
+		margin: 11px 0 0;
+	}
+	
+	.qodef-m-icon-wrapper {
+		line-height: 1;
+
+		.qodef-svg-circle {
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			fill: none;
+			stroke: $main-color;
+			overflow: visible;
+
+			circle {
+				stroke-width: .7;
+				transform: rotate(-145deg);
+				transform-origin: center;
+				stroke: rgba($main-color, .5);
+
+				&:nth-child(2) {
+					stroke-dasharray: 330;
+					stroke-dashoffset: 330;
+					stroke: $main-color;
+				}
+			}
+
+			&.qodef--appear, .elementor-editor-active & {
+				
+				circle {
+
+					&:nth-child(2) {
+						stroke-dashoffset: 0;
+						transform: rotate(55deg);
+						transition: all 1.5s cubic-bezier(.43,.41,.36,.9);
+					}
+				}
+			}
+		}
+	}
+	
+	.qodef-icon-holder {
+		float: none;
+	}
+	
+	.qodef-m-content {
+		@include qodefRelativeLayout();
+	}
+	
+	&.qodef--custom-icon {
+		
+		.qodef-m-icon-wrapper {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			
+			a, img {
+				display: block;
+			}
+		}
+	}
+}

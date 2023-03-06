@@ -1,0 +1,64 @@
+/* ==========================================================================
+   Apartment List shortcode variation styles
+   ========================================================================== */
+
+.qodef-apartment-list {
+
+    &.qodef-item-layout--info-below {
+        
+        .qodef-e-image {
+            margin: 0 0 28px;
+        }
+
+        .qodef-e-content {
+            text-align: center;
+        }
+    
+        .qodef-e-title {
+            margin: 0 0 7px;
+        }
+        
+        .qodef-e-excerpt {
+            margin: 0 0 20px;
+            color: #b2b2b2;
+        }
+
+        .qodef-button {
+            &.qodef-layout--textual {
+
+                &:hover {
+                    color: $second-color;
+                }
+
+                .qodef-m-text {
+                    &:after {
+                        background-color: rgba($second-color, 0.5);
+                    }
+                }
+            }
+        }
+
+        &.swiper-container-initialized {
+
+            .qodef-e-image {
+                margin: 0 0 38px;
+            }
+
+            .qodef-e-excerpt {
+                margin: 0 0 30px;
+            }
+        }
+    }
+}
+
+.qodef-as-info-below-nav {
+    top: 30% !important;
+
+    &.swiper-button-prev {
+        left: 5px !important;
+    }
+
+    &.swiper-button-next {
+        right: 5px !important;
+    }
+}

@@ -1,0 +1,77 @@
+.qodef-property-advanced-info{
+
+    .qodef-tabs.qodef-layout--simple.qodef-orientation--vertical {
+        align-items: flex-start;
+
+        .qodef-tabs-navigation {
+            min-width: 265px;
+            padding: 26px 40px 40px;
+            margin-right: 65px;
+            background-image: url('/wp-content/themes/hendon/assets/img/pattern.png');
+            border: none;
+
+            li {
+                margin-bottom: 16px;
+
+                &:after {
+                    opacity: 1;
+                    background-color: #b1b1b1;
+                }
+
+                a {
+                    color: $heading-color;
+                }
+            }
+        }
+    }
+
+    .qodef-tabs-content{
+        .qodef-tabs-content-inner{
+            display: flex;
+
+            .qodef-e-pai-content-image-holder{
+                flex-grow: 2;
+            }
+
+            .qodef-e-pai-content-section-holder{
+                flex-grow: 2;
+
+                @media only screen and (min-width: 1025px) {
+                    max-width: 32%;
+                }
+            }
+        }
+
+        .qodef-e-pai-content-feature-items-holder{
+            .qodef-e-pai-content-feature-items-holder-inner{
+                margin: 0 0 28px;
+
+                .qodef-e-pai-content-feature-items-row{
+                    display: flex;
+                    padding: 10px 0;
+                    border-bottom: 1px solid #e4e4e4;
+
+                    &:first-child {
+                        padding-top: 0;
+                    }
+
+                    .qodef-e-pai-content-feature-item-title{
+                        flex-grow: 2;
+                    }
+
+                    .qodef-e-pai-content-feature-item-title,
+                    .qodef-e-pai-content-feature-item-value {
+                        @include qodefH6Style;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+
+        .qodef-e-pai-content-description-holder{
+            margin: 0 0 29px;
+        }
+    }
+}

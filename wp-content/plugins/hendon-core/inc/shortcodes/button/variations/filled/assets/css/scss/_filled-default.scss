@@ -1,0 +1,18 @@
+.qodef-button {
+
+    &.qodef-layout--filled {
+        @include qodefButtonInnerBorder();
+        
+        &.qodef-html--link {
+            @include qodefButtonFilledColor();
+    
+            &:hover {
+                @include qodefButtonFilledHoverColor();
+            }
+        }
+    }
+
+    &.qodef-type--filled {
+        @include qodefButtonInnerBorder();
+    }
+}

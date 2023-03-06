@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Property Advanced Info responsive styles
+   ========================================================================== */
+
+.qodef-property-advanced-info {
+
+    @include qodefScreenSize1440 {
+        .qodef-tabs.qodef-layout--simple.qodef-orientation--vertical {
+            .qodef-tabs-navigation {
+                margin-right: 50px;
+            }
+        }
+
+        .qodef-tabs-content {
+            .qodef-tabs-content-inner {
+                .qodef-e-pai-content-image-holder {
+                    margin-right: 50px;
+                }
+            }
+        }
+    }
+
+    @include qodefScreenSize1024 {
+        .qodef-tabs.qodef-layout--simple.qodef-orientation--vertical {
+            .qodef-tabs-navigation {
+                margin-right: 25px;
+            }
+        }
+
+        .qodef-tabs-content {
+            .qodef-tabs-content-inner {
+                display: block;
+
+                .qodef-e-pai-content-image-holder {
+                    margin: 0 0 30px;
+                }
+            }
+        }
+    }
+
+    @include qodefScreenSize480 {
+        .qodef-tabs-content {
+            .qodef-tabs-content-inner {
+                .qodef-e-pai-content-image-holder {
+                    margin: 15px 0 30px;
+                }
+            }
+        }
+    }
+}

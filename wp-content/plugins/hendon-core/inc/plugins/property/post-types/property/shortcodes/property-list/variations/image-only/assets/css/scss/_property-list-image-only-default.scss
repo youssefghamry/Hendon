@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Property List shortcode variation styles
+   ========================================================================== */
+
+.qodef-property-list {
+
+    &.qodef-item-layout--image-only {
+
+        .qodef-e-image {
+            position: relative;
+
+            &:after {
+                content: '';
+                width: calc(100% - 10px);
+                height: 100%;
+                position: absolute;
+                right: 0;
+                top: -10px;
+                z-index: 10;
+                background-image: url('/wp-content/themes/hendon/assets/img/pattern-dark.png');
+            }
+        }
+
+        .qodef-e-media-image {
+            width: calc(100% - 10px);
+            position: relative;
+            z-index: 20;
+            top: 10px;
+        }
+    }
+}
+
+.qodef-ps-image-only-nav {
+
+    &.swiper-button-next {
+        right: 45px !important;
+    }
+
+    &.swiper-button-prev {
+        left: 45px !important;
+    }
+}

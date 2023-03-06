@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Property List responsive styles
+   ========================================================================== */
+
+@include qodefScreenSize768 {
+    .qodef-ps-info-below-nav {
+        display: none;
+    }
+}
+
+@include qodefScreenSize480 {
+    .qodef-property-list {
+        &.qodef-item-layout--info-below {
+            .qodef-e-excerpt {
+                padding: 0;
+            }
+        }
+    }
+}

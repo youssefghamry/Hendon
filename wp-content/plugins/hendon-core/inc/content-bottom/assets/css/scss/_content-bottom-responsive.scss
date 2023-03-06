@@ -1,0 +1,15 @@
+/* ==========================================================================
+# Content Bottom responsive style
+========================================================================== */
+
+@media only screen and (min-width: 1025px) {
+    #qodef-content-bottom {
+        width: 840px;
+    }
+}
+
+@include qodefScreenSize1024 {
+    #qodef-content-bottom {
+        width: 80%;
+    }
+}

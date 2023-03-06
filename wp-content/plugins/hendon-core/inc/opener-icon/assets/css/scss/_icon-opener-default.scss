@@ -1,0 +1,113 @@
+/* ==========================================================================
+   Opener icon styles
+   ========================================================================== */
+
+.qodef-opener-icon {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1;
+	
+	.qodef-m-icon {
+		position: relative;
+		visibility: visible;
+		
+		&.qodef--close {
+			position: absolute;
+			top: 0;
+			left: 0;
+			visibility: hidden;
+			opacity: 0;
+		}
+	}
+	
+	&.qodef-source--icon-pack {
+		font-size: 35px;
+		
+		* {
+			display: inline-block;
+			line-height: inherit;
+			
+			&:before {
+				display: inline-block;
+				line-height: inherit;
+			}
+		}
+	}
+	
+	&.qodef-source--svg-path {
+
+		&:hover {
+			svg {
+				rect {
+
+					&:nth-child(1) {
+						animation: qode-line-visible cubic-bezier(0.68, 0.17, 0.25, 1) 1s forwards;
+					}
+
+					&:nth-child(2) {
+						animation: qode-line-visible cubic-bezier(0.38, 0.8, 0.53, 0.93) 1s .2s forwards;
+					}
+				}
+			}
+		}
+		
+		span {
+			position: relative;
+
+			*,
+			path {
+				fill: currentColor;
+			}
+
+			line {
+				stroke: currentColor;
+			}
+		}
+	}
+	
+	&.qodef-source--predefined {
+		
+		.qodef-m-lines {
+			position: relative;
+			display: block;
+			width: 30px;
+			height: 30px;
+		}
+		
+		.qodef-m-line {
+			position: absolute;
+			left: 0;
+			height: 4px;
+			width: 100%;
+			background-color: currentColor;
+			transition: top .3s ease, transform .3s ease;
+			
+			&.qodef--1 {
+				top: 8px;
+			}
+			
+			&.qodef--2 {
+				top: 17px;
+			}
+		}
+	}
+	
+	.qodef-header--light:not(.qodef-fullscreen-menu--opened) & {
+		
+		&.qodef-source--icon-pack,
+		&.qodef-source--svg-path,
+		&.qodef-source--predefined {
+			color: #fff !important;
+		}
+	}
+	
+	.qodef-header--dark:not(.qodef-fullscreen-menu--opened) & {
+		
+		&.qodef-source--icon-pack,
+		&.qodef-source--svg-path,
+		&.qodef-source--predefined {
+			color: #000 !important;
+		}
+	}
+}

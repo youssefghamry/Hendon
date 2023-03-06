@@ -1,0 +1,72 @@
+.qodef-property-hierarchical-info-holder{
+    text-align: center;
+
+    &.qodef-property-hierarchical-info-bg-pattern {
+        .qodef-hierarchical-item {
+            &:nth-child(even) {
+                background-image: url('/wp-content/themes/hendon/assets/img/pattern.png');
+            }
+        }
+
+        .qodef-hierarchical-item-inner {
+            padding: 125px 0 100px;
+        }
+    }
+
+    .qodef-hierarchical-item-inner {
+        padding: 40px 0;
+    }
+
+    .qodef-phi-category-info-holder {
+        padding: 0 0 60px;
+    }
+
+    .qodef-phi-category-name {
+        margin: 0 0 17px;
+    }
+
+    .qodef-phi-category-description-holder {
+        p {
+            @include qodefH6Style;
+            margin: 0;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: $second-color;
+        }
+    }
+
+    .qodef-apartment-item {
+
+        .qodef-e-title {
+            margin: 26px 0;
+        }
+
+        .qodef-e-label {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 1px 35px 1px 40px;
+            font-size: 11px;
+            letter-spacing: 0.5em;
+            font-family: $alternate-heading-font;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: #fff;
+            background-image: url(/wp-content/themes/hendon/assets/img/pattern-dark.png);
+        }
+
+        .qodef-phi-features-holder{
+            .qodef-phi-feature{
+                display: inline-block;
+                vertical-align: middle;
+                padding: 0 10px;
+            }
+        }
+
+        .qodef-phi-feature-title {
+            padding-top: 4px;
+            font-weight: 500;
+        }
+    }
+}

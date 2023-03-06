@@ -1,0 +1,140 @@
+/* ==========================================================================
+   Numbered Carousel shortcode responsive style - begin
+   ========================================================================== */
+
+.qodef-numbered-carousel {
+	@include qodefScreenSize1440 {
+		.qodef-m-item-title {
+			font-size: 30px;
+		}
+	}
+
+	@include qodefScreenSize1024 {
+		.qodef-m-grid {
+			.qodef-m-grid-line:first-child {
+				display: none;
+			}
+
+			.qodef-m-grid-line:nth-child(2) {
+				left: 0%;
+				width: 20%;
+			}
+
+			.qodef-m-grid-line:nth-child(3) {
+				left: 20%;
+				width: 30%;
+			}
+
+			.qodef-m-grid-line:nth-child(4) {
+				left: 50%;
+				width: 30%;
+			}
+
+			.qodef-m-grid-line:last-child {
+				left: 80%;
+				width: 20%;
+			}
+		}
+
+		.qodef-m-item {
+			.qodef-m-item-inner {
+				max-width: 95%;
+			}
+
+			.qodef-m-item-number-wrapper {
+				position: absolute;
+				top: 65%;
+				right: -1%;
+				opacity: .4;
+				z-index: -1;
+			}
+		}
+
+		.qodef-m-item-number {
+			font-size: 350px;
+		}
+
+		.swiper-slide-prev {
+			.qodef-m-item-number-wrapper {
+				transform: translate3d(-15vw, 0, 0);
+			}
+		}
+
+		.swiper-slide-next,
+		.swiper-slide-next~div:not(.swiper-slide-active) {
+			.qodef-m-item-number-wrapper {
+				transform: translate3d(-15vw, 0, 0);
+			}
+		}
+	}
+
+	@include qodefScreenSize768 {
+		.qodef-m-item {
+			.qodef-m-item-inner {
+				max-width: 100%;
+			}
+		}
+	}
+
+	@include qodefScreenSize680 {
+		.qodef-m-item {
+			width: 100vw;
+			margin: 0;
+			padding: 10%;
+		}
+
+		.swiper-slide-prev {
+			.qodef-m-item-number-wrapper {
+				transform: translate3d(-100%, 0, 0);
+			}
+		}
+
+		.swiper-slide-next,
+		.swiper-slide-next~div:not(.swiper-slide-active) {
+			.qodef-m-item-number-wrapper {
+				transform: translate3d(100%, 0, 0);
+			}
+		}
+	}
+
+	/* Phone Landscape orientation */
+	@media only screen and (max-device-width: 812px) and (orientation: landscape) {
+		.qodef-m-item {
+			.qodef-m-item-inner {
+				max-width: 90%;
+				padding-top: 30px;
+			}
+
+			.qodef-m-item-number-wrapper {
+				top: 55%;
+				right: 5%;
+			}
+		}
+
+		.qodef-m-item-number {
+			font-size: 300px;
+		}
+
+		.qodef-m-item-subtitle-wrapper,
+		.qodef-m-item-text-wrapper {
+			display: none;
+		}
+	}
+
+	@include qodefScreenSize480 {
+		.qodef-m-item {
+
+			.qodef-m-item-title {
+				margin: 0;
+			}
+
+			.qodef-m-item-text-wrapper {
+				display: none;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Numbered Carousel shortcode responsive style - end
+   ========================================================================== */

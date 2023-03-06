@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Call to Action shortcode styles
+   ========================================================================== */
+
+.qodef-call-to-action {
+	
+	&.qodef-layout--standard {
+		@include qodefRelativeLayout();
+		
+		.qodef-m-inner {
+			display: flex;
+			align-items: center;
+		}
+		
+		&.qodef-style--stretched {
+			
+			.qodef-m-inner {
+				justify-content: space-between;
+			}
+		}
+		
+		&.qodef-style--centered {
+			
+			.qodef-m-inner {
+				justify-content: center;
+			}
+		}
+		
+		.qodef-m-title {
+			margin: 0 0 15px;
+		}
+		
+		.qodef-m-content {
+			max-width: 75%;
+			
+			> * {
+				@include qodefH6Style();
+				margin: 0;
+				line-height: 2.23em;
+				text-transform: uppercase;
+			}
+		}
+		
+		.qodef-m-button {
+			flex: 0 0 auto;
+		}
+	}
+}

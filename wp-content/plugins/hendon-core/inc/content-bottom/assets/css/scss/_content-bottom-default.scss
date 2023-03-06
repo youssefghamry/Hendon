@@ -1,0 +1,13 @@
+/* ==========================================================================
+# Content Bottom default style
+========================================================================== */
+
+#qodef-content-bottom {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: auto;
+    max-width: 840px;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}

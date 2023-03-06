@@ -1,0 +1,166 @@
+/* ==========================================================================
+   Image With Text shortcode styles
+   ========================================================================== */
+
+.qodef-image-with-text {
+	@include qodefRelativeLayout();
+	
+	.qodef-m-image {
+		@include qodefRelativeLayout();
+		
+		a, img {
+			display: block;
+		}
+	}
+	
+	.qodef-m-content {
+		@include qodefRelativeLayout();
+	}
+	
+	.qodef-m-title {
+		margin: 31px 0 0;
+
+		a {
+			
+			&:hover {
+				color: inherit;
+			}
+		}
+	}
+	
+	.qodef-m-text {
+		margin: 15px 0 0;
+	}
+
+	&.qodef-image-outline.qodef-image-outline-top-right {
+
+		.qodef-m-image {
+
+			&.qodef--appear, .elementor-editor-active & {
+			
+				img {
+					clip-path: inset(0 0 0 0);
+					-webkit-clip-path: inset(0 0 0 0);
+					transition: 1s .6s cubic-bezier(0.53, 0.38, 0, 1);
+				}
+	
+				&:after {
+					clip-path: inset(0 0 0 0);
+					-webkit-clip-path: inset(0 0 0 0);
+					transition: 1s .3s cubic-bezier(0.53, 0.38, 0, 1);
+				}
+			}
+		
+			img, &:after {
+				clip-path: inset(0 100% 0 0);
+				-webkit-clip-path: inset(0 100% 0 0);
+			}
+		}
+	}
+	
+	&.qodef-image-outline {
+		
+		.qodef-m-image {
+			width: auto;
+			
+			&:after {
+				content: '';
+				position: absolute;
+				z-index: 10;
+				width: 100%;
+				height: 100%;
+				background-image: url('/wp-content/themes/hendon/assets/img/pattern-dark.png');
+			}
+			
+			a, img {
+				position: relative;
+				z-index: 20;
+			}
+		}
+		
+		&.qodef-image-outline-top-right {
+			padding-top: 10px;
+			
+			.qodef-m-image {
+				&:after {
+					top: -10px;
+					right: -10px;
+				}
+			}
+		}
+		
+		&.qodef-image-outline-top-left {
+			padding: 10px 0 0 10px;
+			
+			.qodef-m-image {
+				&:after {
+					top: -10px;
+					left: -10px;
+				}
+			}
+		}
+		
+		&.qodef-image-outline-left {
+			padding-left: 10px;
+			
+			.qodef-m-image {
+				&:after {
+					top: 0;
+					left: -10px;
+				}
+			}
+		}
+		
+		&.qodef-image-outline-right {
+			
+			.qodef-m-image {
+				&:after {
+					top: 0;
+					right: -10px;
+				}
+			}
+		}
+		
+	}
+
+	&.qodef-image-shadow {
+		.qodef-m-image {
+			img {
+				box-shadow: 0 0 20px 0 rgba($heading-color,0.04);
+			}
+		}
+	}
+
+	&.qodef-layout--text-below {
+
+		.qodef-m-image a {
+
+			img {
+				position: relative;
+				z-index: 12;
+			}
+			
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-image: url('/wp-content/themes/hendon/assets/img/pattern-dark.png');
+				z-index: 1;
+				transition: .5s cubic-bezier(0.25, 0.24, 0, 0.99);
+			}
+		}
+
+		&:hover {
+
+			.qodef-m-image a {
+
+				&:after {
+					transform: translate3d(10px, -10px, 0);
+				}
+			}
+		}
+	}
+}

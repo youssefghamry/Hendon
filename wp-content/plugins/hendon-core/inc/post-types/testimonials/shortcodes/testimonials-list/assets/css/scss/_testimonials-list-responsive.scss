@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Testimonials list responsive styles
+   ========================================================================== */
+
+@include qodefScreenSize768 {
+
+	.qodef-testimonials-list {
+		.qodef-e-text {
+			padding: 0;
+		}
+	}
+
+	.elementor-widget-hendon_core_testimonials_list {
+		.swiper-button-prev,
+		.swiper-button-next {
+			display: none;
+		}
+	}
+}
+
+@include qodefScreenSize480 {
+	.qodef-testimonials-list {
+		.qodef-e-title {
+			font-size: 32px;
+			line-height: 38px;
+		}
+	}
+}

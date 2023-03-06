@@ -1,0 +1,106 @@
+/* ==========================================================================
+   Author Info styles
+   ========================================================================== */
+
+#qodef-author-info {
+	@include qodefRelativeLayout();
+	margin-top: 100px;
+	
+	.qodef-m-inner {
+		position: relative;
+		display: flex;
+		align-items: stretch;
+	}
+	
+	.qodef-m-image {
+		flex-shrink: 0;
+		margin-right: 25px;
+		
+		a, img {
+			display: block;
+		}
+
+		img {
+			margin: 0;
+		}
+	}
+	
+	.qodef-m-author {
+		margin: 0;
+		line-height: 1em;
+	}
+	
+	.qodef-m-email {
+		margin: 5px 0 0;
+	}
+	
+	.qodef-m-description {
+		margin: 14px 0 0;
+		line-height: 1.45em;
+	}
+	
+	.qodef-m-social-icons {
+		margin-top: 21px;
+		
+		a {
+			position: relative;
+			vertical-align: top;
+			margin-right: 14px;
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			font-size: 16px;
+			color: $main-color;
+			border: 1px solid rgba($main-color, 0.5);
+			border-radius: 50%;
+			text-align: center;
+			
+			&:last-child {
+				margin-right: 0;
+			}
+
+			.qodef-svg-circle {
+				position: absolute;
+				display: block;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				z-index: 1;
+				fill: none;
+				color: currentColor;
+				stroke: rgba($main-color, 1);
+				transition: all .8s cubic-bezier(0.14, 0.57, 0.14, 1.03);
+				overflow: visible;
+				transform: scale(1.05);
+	
+				circle {
+					stroke-dasharray: 160;
+					stroke-dashoffset: 160;
+					stroke-width: 1;
+					transition: all .8s cubic-bezier(.45,0,.14,1.03);
+					transform: rotate(-200deg);
+					transform-origin: center;
+	
+					.qodef-browser--ms-explorer & {
+						opacity: 0;
+					}
+				}
+			}
+	
+			&:hover {
+	
+				.qodef-svg-circle circle {
+					stroke-dashoffset: 0;
+					transform: rotate(55deg);
+					transition: 1s cubic-bezier(0.38, 0.67, 0.76, 0.66);
+					
+					.qodef-browser--ms-explorer & {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}

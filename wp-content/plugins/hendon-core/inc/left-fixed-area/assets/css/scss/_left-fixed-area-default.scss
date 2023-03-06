@@ -1,0 +1,68 @@
+/* ==========================================================================
+# Left Fixed Area style - begin
+========================================================================== */
+
+.qodef-left-fixed-area-active {
+
+	#qodef-left-fixed-area {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 420px;
+		height: 100%;
+		padding: 150px 50px 83px;
+		outline: 0;
+		z-index: 10;
+		box-sizing: border-box;
+		background-image: url(/wp-content/themes/hendon/assets/img/pattern4.png);
+	}
+
+	#qodef-page-outer,
+	#qodef-page-footer {
+		padding-left: 420px;
+	}
+
+	.qodef-left-fixed-area-inner {
+		@include qodefRelativeLayout();
+		height: 100%;
+
+		.qodef-left-fixed-bottom-area {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+
+			.qodef-social-icons-group {
+				text-align: center;
+			}
+		}
+
+		.qodef-contact-form-7 {
+			button[type="submit"] {
+				width: 100%;
+			}
+
+			input,
+			textarea {
+				padding: 14px 20px 14px 0;
+			}
+
+			input {
+				margin: 0 0 39px;
+
+				@include qodefScreenSize1366 {
+					margin: 0 0 30px;
+				}
+			}
+
+			textarea {
+				height: 53px;
+				margin: 0 0 60px;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+# Left Fixed Area style - end
+========================================================================== */

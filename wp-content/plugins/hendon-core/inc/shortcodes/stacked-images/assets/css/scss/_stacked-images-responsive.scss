@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Stacked Images responsive style - begin
+   ========================================================================== */
+
+.qodef-stacked-images {
+
+	@include qodefScreenSize1440 {
+		.qodef-m-images {
+			>img {
+				width: 75%;
+				height: auto;
+			}
+		}
+
+		&.qodef-has-additional-image {
+
+			&.qodef-stacked-image-left {
+
+				.qodef-m-images > img,
+				.qodef-additional-stacked-image-holder img  {
+					width: 100%;
+				}
+
+				.qodef-stack-image-img-holder img {
+					width: 90%;
+				}
+			}
+
+			&.qodef-stacked-image-right {
+
+				.qodef-m-images > img,
+				.qodef-additional-stacked-image-holder img  {
+					width: 90%;
+				}
+
+				.qodef-stack-image-img-holder img {
+					width: 100%;
+				}
+
+			}
+
+		}
+	}
+
+
+}
+
+/* ==========================================================================
+   Stacked Images responsive style - end
+   ========================================================================== */

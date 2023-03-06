@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Button shortcode styles
+   ========================================================================== */
+
+.qodef-button {
+	
+	&.qodef-html--link {
+		@include qodefButtonDefaultStyle();
+		@include qodefButtonSize();
+	}
+	
+	&.qodef-size--small {
+		@include qodefButtonSize(small);
+	}
+	
+	&.qodef-size--large {
+		@include qodefButtonSize(large);
+	}
+	
+	&.qodef-size--full {
+		width: 100%;
+		text-align: center;
+	}
+
+	&.qodef-layout--borders-animated {
+
+		.qodef-top-border,
+		.qodef-right-border,
+		.qodef-bottom-border,
+		.qodef-left-border {
+			position: absolute;
+			background-color: #fff;
+			transition: .5s cubic-bezier(0.71, 0.29, 0.18, 0.97);
+		}
+
+		&.qodef-layout--outlined {
+
+			.qodef-top-border,
+			.qodef-right-border,
+			.qodef-bottom-border,
+			.qodef-left-border {
+				background-color: #c28562;
+			}
+		}
+
+		.qodef-top-border,
+		.qodef-bottom-border {
+			width: 0;
+			height: 1px;
+		}
+
+		.qodef-right-border,
+		.qodef-left-border {
+			width: 1px;
+			height: 0;
+		}
+
+		.qodef-top-border {
+			top: -1px;
+			right: 0;
+		}
+
+		.qodef-bottom-border {
+			left: 0;
+			bottom: -1px;
+		}
+
+		.qodef-right-border {
+			top: 0;
+			right: -1px;
+		}
+
+		.qodef-left-border {
+			left: -1px;
+			bottom: 0;
+		}
+
+		&:hover {
+
+			.qodef-top-border,
+			.qodef-bottom-border {
+				width: calc(100% + 1px);
+			}
+
+			.qodef-right-border,
+			.qodef-left-border {
+				height: calc(100% + 1px);
+			}
+		}
+	}
+}

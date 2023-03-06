@@ -1,0 +1,28 @@
+.qodef-property-hierarchical-info-holder{
+
+    @include qodefScreenSize1024 {
+        .qodef-grid {
+            &.qodef-col-num--3 {
+                .qodef-grid-item {
+                    &.qodef-apartment-item {
+                        width: 50%;
+                        margin: 0 0 60px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include qodefScreenSize680 {
+        .qodef-grid {
+            &.qodef-col-num--3 {
+                .qodef-grid-item {
+                    &.qodef-apartment-item {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,34 @@
+.qodef-button {
+    &.qodef-layout--minimal {
+        padding: 0 !important;
+        background-color: transparent;
+        border: 0;
+
+        svg {
+    
+            circle {
+                &:nth-child(2) {
+                    stroke-dasharray: 150;
+                    stroke-dashoffset: 150;
+                    transition: all 1.5s cubic-bezier(.45,0,.14,1.03);
+                    transform: rotate(-200deg);
+                    transform-origin: 71% 50%;
+                }
+            }
+        }
+
+        &:hover {
+
+            svg {
+    
+                circle {
+                    &:nth-child(2) {
+                        stroke-dashoffset: 0;
+                        transform: rotate(55deg);
+                        transition: 1.2s cubic-bezier(0.38, 0.67, 0.76, 0.66);
+                    }
+                }
+            }
+        }
+    }
+}

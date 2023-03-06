@@ -1,0 +1,103 @@
+/* ==========================================================================
+   Testimonials list shortcode styles
+   ========================================================================== */
+
+.qodef-testimonials-list {
+
+	.swiper-wrapper {
+		cursor: grab;
+		transition-timing-function: cubic-bezier(0.46, 0.26, 0.33, 0.98);
+
+		.swiper-slide {
+
+			.qodef-e-text, .qodef-e-media-image, .qodef-e-author {
+				opacity: 0;
+				transform: translateY(10px);
+				transition: 1s;
+			}
+
+			&.swiper-slide-active, &.swiper-slide-duplicate-active {
+
+				.qodef-e-text {
+					opacity: 1;
+					transform: translateX(0);
+					transition: 1s .3s;
+				}
+
+				.qodef-e-media-image {
+					opacity: 1;
+					transform: translateX(0);
+					transition: 1s .5s;
+				}
+				
+				.qodef-e-author {
+					opacity: 1;
+					transform: translateX(0);
+					transition: 1s .7s;
+				}
+			}
+		}
+	}
+	
+	.qodef-e-inner {
+		padding-bottom: 40px;
+	}
+	
+	.qodef-e-content {
+		text-align: center;
+	}
+	
+	.qodef-e-media-image {
+		width: 80px;
+		margin: 0 auto 18px;
+	}
+	
+	.qodef-e-title {
+		margin: 10px 0 15px;
+		font-size: 56px;
+	}
+	
+	.qodef-e-text {
+		margin: 0 0 42px;
+		padding: 0 15%;
+		font-size: 25px;
+		line-height: 1.56em;
+	}
+	
+	.qodef-e-author {
+		margin: 0;
+		text-transform: uppercase;
+		
+		.qodef-e-author-name {
+			line-height: 1em;
+			margin: 0 0 3px;
+		}
+		
+		.qodef-e-author-job {
+			@include qodefH6Style();
+			color: $main-color;
+			font-weight: 500;
+		}
+	}
+	
+	.swiper-pagination-bullets {
+		bottom: 5px !important;
+		
+		.swiper-pagination-bullet {
+			&:before {
+				background-color: $main-color;
+			}
+		}
+	}
+	
+	&.qodef-skin--light {
+		.qodef-e-title,
+		.qodef-e-author-name {
+			color: #fff;
+		}
+		
+		.qodef-e-text {
+			color: #b2b2b2;
+		}
+	}
+}

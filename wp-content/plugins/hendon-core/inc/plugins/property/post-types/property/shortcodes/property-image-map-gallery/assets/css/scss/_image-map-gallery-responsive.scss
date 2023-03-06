@@ -1,0 +1,26 @@
+.qodef-image-map-gallery {
+
+    @include qodefScreenSize1024 {
+        .qodef-map-holder {
+            .qodef-map-holder-inner {
+                padding: 50px 0 0;
+            }
+
+            .qodef-image-map-holder-overlay {
+                margin-top: 80px;
+            }
+        }
+    }
+
+    @include qodefScreenSize480 {
+        .qodef-map-holder {
+
+            .qodef-map-navigation {
+                .qodef-map-nav-item {
+                    margin: 0 15px;
+                }
+            }
+        }
+    }
+
+}

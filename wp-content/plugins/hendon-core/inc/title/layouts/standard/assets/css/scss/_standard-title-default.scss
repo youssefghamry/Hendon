@@ -1,0 +1,24 @@
+/* ==========================================================================
+   Standard Title layout styles
+   ========================================================================== */
+
+.qodef-page-title {
+	
+	&.qodef-title--standard {
+	
+		.qodef-m-subtitle {
+			margin: 13px 0 0;
+			font-family: $alternate-heading-font;
+			font-size: 13px;
+			line-height: 2.23em;
+			letter-spacing: 0.8em;
+			font-weight: 500;
+			text-transform: uppercase;
+			color: $second-color;
+
+			@media screen and (min-width: 1025px) {
+				padding: 0 18%;
+			}
+		}
+	}
+}

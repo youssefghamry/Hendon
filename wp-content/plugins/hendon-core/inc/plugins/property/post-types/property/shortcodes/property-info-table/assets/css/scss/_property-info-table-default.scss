@@ -1,0 +1,84 @@
+.qodef-property-info-table{
+
+    .qodef-e-pit-header-title{
+        margin: 0;
+    }
+
+    .qodef-button{
+        &.qodef-layout--textual{
+            display: block;
+            color: $heading-color;
+    
+            .qodef-m-text {
+                line-height: 2.9em;
+                
+                &:after {
+                    bottom: 3px;
+                    background-color: #b1b1b1;
+                }
+            }
+        }
+    }
+
+    .qodef-e-pit-header{
+        display: flex;
+        margin: 0 0 15px;
+
+        .qodef-e-pit-item{
+            flex: 1;
+            text-align: center;
+        }
+    }
+
+    .qodef-e-pit-content{
+        .qodef-e-pit-row{
+            display: flex;
+
+            .qodef-e-pit-item{
+                flex: 1;
+                text-align: center;
+            }
+        }
+    }
+
+    .qodef-e-pit-content,
+    .qodef-e-content-responsive{
+
+        .qodef-e-pit-row{
+            padding: 9px 0;
+            border-bottom: 1px solid;
+            border-color: #e4e4e4;
+
+            @include qodefScreenSize768 {
+                padding: 20px 0;
+            }
+        }
+
+        .qodef-e-pit-item-content{
+            &.qodef-pit-type--text{
+                @include qodefH6Style();
+                text-transform: uppercase;
+                color: $main-color;
+            }
+            
+            &.qodef-pit-type--number {
+                @include qodefH6Style();
+                font-weight: 400;
+            }
+        }
+    }
+
+    .qodef-e-inner-responsive{
+        display: none;
+
+        .qodef-e-pit-content-item-resposnive {
+            display: flex;
+            padding: 7px 0;
+
+            & > * {
+                flex: 1;
+                text-align: center;
+            }
+        }
+    }
+}

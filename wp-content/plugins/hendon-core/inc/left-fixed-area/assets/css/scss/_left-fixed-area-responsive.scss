@@ -1,0 +1,60 @@
+/* ==========================================================================
+# Left Fixed Area style - begin
+========================================================================== */
+
+.qodef-left-fixed-area-active {
+
+	@include qodefScreenSize1440 {
+		#qodef-left-fixed-area {
+			width: 320px;
+		}
+
+		#qodef-page-outer,
+		#qodef-page-footer {
+			padding-left: 320px;
+		}
+	}
+
+	@include qodefScreenSize1366 {
+		#qodef-left-fixed-area {
+			padding: 120px 50px 25px;
+		}
+
+		.qodef-left-fixed-area-inner {
+			.qodef-contact-form-7 {
+				form.wpcf7-form.invalid {
+					input {
+						margin: 0 0 10px;
+					}
+
+					textarea {
+						margin: 0 0 20px;
+					}
+
+					div.wpcf7-validation-errors {
+						margin: 20px 0 0;
+						background-color: #fff;
+						position: relative;
+						z-index: 10;
+					}
+				}
+			}
+		}
+	}
+
+	@include qodefScreenSize1024 {
+		#qodef-left-fixed-area {
+			display: none;
+		}
+
+		#qodef-page-outer,
+		#qodef-page-footer {
+			padding-left: 0;
+		}
+	}
+
+}
+
+/* ==========================================================================
+# Left Fixed Area style - end
+========================================================================== */

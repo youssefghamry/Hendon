@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Blog List Minimal styles
+   ========================================================================== */
+
+.qodef-blog {
+	
+	&.qodef-item-layout--date-in-image {
+
+		@include qodefScreenSize480 {
+			&.qodef-grid {
+				.qodef-grid-inner {
+					article {
+						margin-bottom: 60px;
+					}
+				}
+			}
+		}
+	}
+}

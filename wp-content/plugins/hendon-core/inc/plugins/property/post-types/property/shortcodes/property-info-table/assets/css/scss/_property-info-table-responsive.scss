@@ -1,0 +1,19 @@
+.qodef-property-info-table{
+
+    @include qodefScreenSize1024 {
+        .qodef-e-pit-header-title{
+            font-size: 18px;
+        }
+    }
+
+    @include qodefScreenSize768 {
+        .qodef-e-inner{
+            display: none;
+        }
+
+        .qodef-e-inner-responsive{
+            display: block;
+        }
+    }
+
+}

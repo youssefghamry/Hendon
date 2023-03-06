@@ -1,0 +1,18 @@
+/* ==========================================================================
+   Apartment List shortcode variation responsive styles
+   ========================================================================== */
+
+.qodef-apartment-list {
+
+    &.qodef-item-layout--info-below {
+        
+       @include qodefScreenSize768 {
+
+           >.qodef-grid-inner {
+               >.qodef-grid-item {
+                   margin: 0 0 60px;
+               }
+           }
+       }
+    }
+}

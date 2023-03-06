@@ -1,0 +1,75 @@
+/* ==========================================================================
+   Blog List Minimal styles
+   ========================================================================== */
+
+.qodef-blog {
+	
+	&.qodef-item-layout--date-in-image {
+		
+		article {
+
+			&.qodef-e--isHovered {
+
+				.qodef-e-media-image {
+    
+                    a {
+                        img {
+                            transform: scale(1.02) translateX(4px);
+                        }
+                    }
+                }
+
+				.qodef-button {
+					
+					&.qodef-layout--minimal {
+
+						svg {
+    
+							circle {
+								&:nth-child(2) {
+									stroke-dashoffset: 0;
+									transform: rotate(55deg);
+									transition: .8s cubic-bezier(0.38, 0.67, 0.76, 0.66);
+								}
+							}
+						}
+					}
+				}
+			}
+			
+			.qodef-e-info {
+				
+				&.qodef-info--bottom {
+					margin-top: 5px;
+				}
+			}
+			
+			.qodef-e-media {
+				margin: 0 0 30px;
+				
+				.qodef-e-info-date {
+					left: auto;
+					right: 0;
+					top: 42px;
+				}
+			}
+			
+			.entry-title {
+				margin: 0 0 7px;
+			}
+			
+			.qodef-e-excerpt {
+				margin: 0 0 13px;
+				color: #b2b2b2;
+			}
+			
+			.qodef-e-read-more {
+				svg {
+					polygon {
+						fill: $second-color;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,79 @@
+.qodef-image-map {
+    display: block;
+    position: relative;
+
+    .qodef-map-holder-inner {
+        .imp-wrap {
+            max-width: 100%;
+            margin: 0 auto;
+            width: 100%!important;
+            height: auto!important;
+        }
+    }
+
+    .qodef-m-item {
+        position: absolute;
+        left: 90px;
+        bottom: 24vh;
+        min-width: 271px;
+        padding: 20px 40px 30px;
+        background-image: url('/wp-content/themes/hendon/assets/img/pattern.png');
+        opacity: 0;
+
+        @keyframes qodef-animate-text-in {
+            0% {
+                opacity: 0;
+                transform: translateY(5px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        &.qodef--active {
+            opacity: 1;
+
+            .qodef-e-title, .qodef-e-subtitle, .qodef-e-additional-info {
+                opacity: 1;
+                transform: translateY(0);
+                transition: .5s cubic-bezier(.36,.3,.04,.91);
+            }
+
+            .qodef-e-subtitle {
+                transition-delay: .2s;
+            }
+
+            .qodef-e-additional-info {
+                transition-delay: .3s;
+            }
+        }
+
+        .qodef-e-title, .qodef-e-subtitle, .qodef-e-additional-info {
+            opacity: 0;
+            transform: translateX(5px);
+            transition: 1s;
+        }
+
+        .qodef-e-title {
+            margin: 12px 0 13px;
+        }
+
+        .qodef-e-subtitle {
+            margin: 0;
+            line-height: 1em;
+            color: $main-color;
+        }
+
+        .qodef-e-additional-info {
+            margin: 0;
+        }
+    }
+
+}
+
+.imp-tooltips-container,
+.imp-fullscreen-tooltips-container,
+.imp-fullscreen-tooltip.imp-tooltip-visible {
+    display: none !important;
+}

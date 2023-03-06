@@ -1,0 +1,70 @@
+/* ==========================================================================
+   Image Gallery shortcode styles
+   ========================================================================== */
+
+.qodef-image-gallery {
+	&.qodef-swiper--initialized {
+
+		.qodef-slider-image-holder {
+			position: relative;
+			cursor: grab;
+
+			&:after {
+				content: '';
+				width: calc(100% - 10px);
+				height: 100%;
+				position: absolute;
+				right: 0;
+				top: -10px;
+				z-index: 10;
+				background-image: url('/wp-content/themes/hendon/assets/img/pattern-dark.png');
+				transform: translate3d(-5px, 20px, 0) scale(.9);
+				transition: 1s cubic-bezier(.35,.15,0,.99);
+				transform-origin: 83% 50%;
+			}
+
+			.qodef-slider-image-holder-inner {
+				overflow: hidden;
+			}
+
+			img {
+				transform: scale(1.02) translateX(-24px);
+                transition: transform 1s .4s cubic-bezier(0.36, 0.1, 0.04, 0.98);
+                backface-visibility: hidden;
+                will-change: transform;
+			}
+		}
+
+		.swiper-slide-active, .swiper-slide-duplicate-active {
+
+			.qodef-slider-image-holder {
+				
+				&:after {
+					transform: translate3d(0, 0, 0) scale(1);
+					transition: 1s .4s cubic-bezier(0.36, 0.12, 0, 0.99);
+				}
+
+				img {
+					transform: scale(1) translateX(0);
+				}
+			}
+		}
+
+		.qodef-slider-image-holder-inner {
+			width: calc(100% - 10px);
+			position: relative;
+			z-index: 20;
+			top: 10px;
+		}
+	}
+}
+
+.qodef-image-gallery-nav {
+	&.swiper-button-next {
+		right: 5px !important;
+	}
+
+	&.swiper-button-prev {
+		left: 5px !important;
+	}
+}

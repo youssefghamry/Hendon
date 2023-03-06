@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Spinner layout styles
+   ========================================================================== */
+
+#qodef-page-spinner {
+	
+	&.qodef-layout--hendon {
+		
+		.qodef-m-hendon {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			opacity: 0;
+			animation: qode-fade-in 1s .3s forwards;
+			
+			.qodef-m-hendon-text {
+				position: relative;
+				z-index: 12;
+				
+				span {
+					font-size: 100px;
+					font-family: $heading-font;
+					text-transform: uppercase;
+					color: currentColor;
+					letter-spacing: 0.15em;
+					opacity: 0;
+					display: inline-block;
+					will-change: transform;
+					white-space: pre-wrap;
+
+					@include qodefScreenSize680 {
+						font-size: 50px;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,63 @@
+/* ==========================================================================
+   Apartment List shortcode styles
+   ========================================================================== */
+
+.qodef-apartment-list {
+
+    .qodef-e-inner {
+        position: relative;
+    }
+
+    .qodef-e {
+
+        &:hover {
+
+            .qodef-e-image {
+
+                a {
+                    img {
+                        transform: scale(1.02) translateX(4px);
+                    }
+                }
+            }
+        }
+    }
+
+    .qodef-e-image {
+        overflow: hidden;
+
+        img {
+            display: block;
+            transform: scale(1.02) translateX(-4px);
+            transition: transform 1s cubic-bezier(0.22, 0.54, 0.04, 0.98);
+            backface-visibility: hidden;
+            will-change: transform;
+        }
+    }
+
+    .qodef-e-title {
+        margin: 0;
+    }
+
+    .qodef-m-pagination {
+        margin-top: 35px;
+    }
+
+    &.qodef-items--fixed {
+
+        .qodef-e-image {
+            //because of the custom padding around item
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .qodef-e-media-image {
+            height: 100%;
+
+            a {
+                @include qodefRelativeLayout();
+                height: 100%;
+            }
+        }
+    }
+}
